@@ -34,7 +34,17 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "โปรดระบุ ID ตามด้วยเครื่องหมาย #"; 
+  $arrPostData['messages'][0]['text'] = "โปรดระบุ ID ตามด้วยเครื่องหมาย #";
+}else if($arrJson['events'][0]['message']['text'] == "ฉันสวยไหม"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+//Get the file
+$content = file_get_contents("http://www.google.co.in/intl/en_com/images/srpr/logo1w.png");
+//Store in the filesystem.
+$fp = fopen("/location/to/save/image.jpg", "w");
+  $arrPostData['messages'][0]['text'] = fwrite($fp, $content);
+fclose($fp); 
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
