@@ -46,8 +46,8 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 //$fp = fopen("/picture/image.jpg", "w");
 //fwrite($fp, $content) 
 //fclose($fp); 
-  $arrPostData['messages'][0]['originalContentUrl'] = "http://www.google.co.in/intl/en_com/images/srpr/logo1w.png";
-  $arrPostData['messages'][0]['previewImageUrl'] = "http://www.google.co.in/intl/en_com/images/srpr/logo1w.png";
+  $arrPostData['messages'][0]['image']['originalContentUrl'] = "http://www.google.co.in/intl/en_com/images/srpr/logo1w.png";
+//  $arrPostData['messages'][0]['previewImageUrl'] = "http://www.google.co.in/intl/en_com/images/srpr/logo1w.png";
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
