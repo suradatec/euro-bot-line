@@ -38,13 +38,14 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 }else if($arrJson['events'][0]['message']['text'] == "ฉันสวยไหม"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-//  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['type'] = "image";
 //Get the file
-$content = file_get_contents("http://www.google.co.in/intl/en_com/images/srpr/logo1w.png");
+//$content = file_get_contents("http://www.google.co.in/intl/en_com/images/srpr/logo1w.png");
 //Store in the filesystem.
-$fp = fopen("/picture/image.jpg", "w");
-  $arrPostData['messages'][0]['text'] = fwrite($fp, $content);
-fclose($fp); 
+//$fp = fopen("/picture/image.jpg", "w");
+//fwrite($fp, $content) 
+//fclose($fp); 
+  $arrPostData['messages'][0]['text'] = "http://www.google.co.in/intl/en_com/images/srpr/logo1w.png"; 
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
