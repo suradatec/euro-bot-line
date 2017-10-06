@@ -30,8 +30,8 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/image/Nyd3";
-  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/image/Nyd3";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/images/dc1b392fc74330b87cc96e9082627f8d.jpg";
+  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/images/dc1b392fc74330b87cc96e9082627f8d.jpg";
 }else if($arrJson['events'][0]['message']['text'] == "อุ๊"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
