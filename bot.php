@@ -27,10 +27,11 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 }else if($arrJson['events'][0]['message']['text'] == "บุญญาพร"){
-  $arrPostData = array();
+ $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ผัวชื่อ เต้ย";
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://www.img.in.th/image/Nyd3";
+  $arrPostData['messages'][0]['previewImageUrl'] = "https://www.img.in.th/image/Nyd3";
 }else if($arrJson['events'][0]['message']['text'] == "อุ๊"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
