@@ -40,12 +40,6 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-//Get the file
-//$content = file_get_contents("http://www.google.co.in/intl/en_com/images/srpr/logo1w.png");
-//Store in the filesystem.
-//$fp = fopen("/picture/image.jpg", "w");
-//fwrite($fp, $content) 
-//fclose($fp); 
   $arrPostData['messages'][0]['originalContentUrl'] = "https://s3-ap-southeast-1.amazonaws.com/picz.in.th/2017/10/03/instruments-childhood.jpg";
   $arrPostData['messages'][0]['previewImageUrl'] = "https://s3-ap-southeast-1.amazonaws.com/picz.in.th/2017/10/03/instruments-childhood.jpg";
 }else{
