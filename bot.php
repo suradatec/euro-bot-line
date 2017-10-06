@@ -30,7 +30,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ผัวชื่อ บอย 555";
+  $arrPostData['messages'][0]['text'] = "ผัวชื่อ เต้ย";
 }else if($arrJson['events'][0]['message']['text'] == "อุ๊"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
